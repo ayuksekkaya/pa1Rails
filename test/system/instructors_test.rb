@@ -16,6 +16,7 @@ class InstructorsTest < ApplicationSystemTestCase
 
     fill_in "Email", with: @instructor.email
     fill_in "First", with: @instructor.first
+    fill_in "Id instructor", with: @instructor.id_instructor
     fill_in "Last", with: @instructor.last
     click_on "Create Instructor"
 
@@ -29,6 +30,7 @@ class InstructorsTest < ApplicationSystemTestCase
 
     fill_in "Email", with: @instructor.email
     fill_in "First", with: @instructor.first
+    fill_in "Id instructor", with: @instructor.id_instructor
     fill_in "Last", with: @instructor.last
     click_on "Update Instructor"
 
