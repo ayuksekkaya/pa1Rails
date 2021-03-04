@@ -33,7 +33,12 @@ instructor_hash.each do |row|
 end
 
 course_hash.each do |row|
-    course_row = {id_course: row["id"], name: row["name"], code: row["code"], term: row["term"]}
+    x = "#"
+    row["subjects"].each do |inner_row|
+        x = inner_row["id"]
+    end
+
+    course_row = ({id_course: x, name: row["name"], code: row["code"], term: row["term"]})
     course_array.push(course_row)
 end
 
