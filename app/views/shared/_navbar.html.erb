@@ -4,9 +4,11 @@
           <%= link_to "BRANDEIS", root_path, id: "logo" %>
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "Home", '/'%></li>
-            <li><%= link_to "Instructors",  '/instructors' %></li>
-            <li><%= link_to "Subjects", '/subjects' %></li>
-            <li><%= link_to "Courses", '/courses' %></li>
+            <li><%= link_to "Instructors",  instructors_path %></li>
+            <li><%= link_to "Subjects", subjects_path %></li>
+            <li><%= link_to "Courses", courses_path %></li>
+            <li><%= link_to "Signup", signup_path %></li>
+
           </ul>
         </nav>
       </div>
