@@ -1,0 +1,20 @@
+
+<h1> Results </h1>
+
+
+    <% @courses.each do |course| %>
+    <div class= "container">
+      <div class= "row">
+        <div class="col-sm">
+          <%= course.name %>
+          <%= course.code %>
+          <%= button_to 'Enroll', {:controller => "searches", :action => "create", :course_id => course.id, :user_id=> session[:user_id], :course_name => course.name} , :method=>:post  %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  
+
+
+
+

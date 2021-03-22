@@ -1,9 +1,24 @@
 <div class="d-flex align-items-center justify-content-center">
-  <h2>Course Enrollment</h2>
+  <h2>Enrolled Courses</h2>
 </div>
-<div class="d-flex align-items-center justify-content-center">
   <p>
-    Navigate to the page you would like to see
+    <% if logged_in? %>
+      <% if !@enrollments.blank? %>
+      <% @enrollments.each do |enrollment| %>
+       <div class= "container">
+        <div class= "row my-row">
+         <div class="col-sm">
+          <%= enrollment.course_name %>
+          <%= Course.find_by(name: enrollment.course_name).code %>
+        </div>
+      </div>
+    </div>
+      <% end %>
+      <% else %>
+      <p>Enroll in some classes in order to see what classes you are taking.</p>
+     <% end %>
+    <% else %>
+      Signup/login to search for courses and enroll.
+    <% end %>
   </p>
-</div>
 

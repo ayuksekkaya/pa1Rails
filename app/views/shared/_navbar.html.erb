@@ -1,4 +1,4 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
       <div class="container">
         <nav>
           <%= link_to "BRANDEIS", root_path, id: "logo" %>
@@ -8,7 +8,9 @@
             <li><%= link_to "Instructors",  instructors_path %></li>
             <li><%= link_to "Subjects", subjects_path %></li>
             <li><%= link_to "Courses", courses_path %></li>
+            <li><%= link_to "Search", search_path %></li>
             <li><%= link_to "Logout", logout_path %></li>
+
           <% else %>
             <li><%= link_to "Signup", signup_path %></li>
             <li><%= link_to "Login", login_path %></li>
@@ -16,4 +18,4 @@
           </ul>
         </nav>
       </div>
-    </header>
+    </nav>

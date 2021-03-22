@@ -25,7 +25,7 @@ course_array = []
 columns_course = [:id_course, :name, :code, :term]
 
 subject_array = []
-columns_sub = [:name, :abbreviation]
+columns_sub = [:name, :abbreviation, :subject_id]
 
 instructor_hash.each do |row|
     instructor_row = {id_instructor: row["id"], first: row["first"], last: row["last"], email: row["email"]}
@@ -43,7 +43,7 @@ course_hash.each do |row|
 end
 
 subject_hash.each do |row|
-    subject_row = {name: row["name"], abbreviation: row["abbreviation"]}
+    subject_row = {name: row["name"], abbreviation: row["abbreviation"], subject_id: row["id"]}
     subject_array.push(subject_row)
 end
 

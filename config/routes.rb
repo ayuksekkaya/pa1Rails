@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :instructors
   resources :users
 
+
   get '/courses', to: 'courses#show'
   get '/subjects', to: 'subjects#show'
   get '/instructors', to: 'instructors#show'
@@ -14,6 +15,11 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
+
+
+  get '/search', to: 'searches#search'
+  get '/result', to: 'searches#result'
+  post '/enroll', to: 'searches#create'
 
 
 
